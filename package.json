@@ -1,0 +1,72 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "web": "expo start --web",
+    "start": "tsconfig-paths/register react-native start",
+    "commit": "git-cz"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^12.0.0",
+    "@react-native-async-storage/async-storage": "1.15.0",
+    "@react-navigation/bottom-tabs": "^6.0.7",
+    "@react-navigation/native": "^6.0.4",
+    "@react-navigation/native-stack": "^6.2.2",
+    "axios": "^0.24.0",
+    "expo": "~42.0.1",
+    "expo-splash-screen": "~0.11.2",
+    "expo-sqlite": "9.2.1",
+    "expo-sqlite-orm": "1.5.6",
+    "expo-status-bar": "~1.0.4",
+    "expo-updates": "~0.8.1",
+    "moment": "^2.29.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "~0.63.4",
+    "react-native-chart-kit": "^6.11.0",
+    "react-native-gesture-handler": "~1.10.2",
+    "react-native-mask-input": "^1.0.4",
+    "react-native-paper": "^4.9.2",
+    "react-native-password-strength-meter": "^0.0.5",
+    "react-native-picker-select": "^8.0.4",
+    "react-native-reanimated": "~2.2.0",
+    "react-native-safe-area-context": "3.2.0",
+    "react-native-screens": "~3.4.0",
+    "react-native-svg": "12.1.1",
+    "react-native-unimodules": "0.14.10",
+    "react-native-vector-icons": "^8.1.0",
+    "react-native-web": "~0.13.12",
+    "react-navigation": "^4.4.4",
+    "react-redux": "^7.2.5",
+    "redux": "^4.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-native": "^0.65.1",
+    "@types/react-native-vector-icons": "^6.4.9",
+    "@types/react-redux": "^7.1.18",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "^7.0.4",
+    "ts-node": "^10.2.1",
+    "tsconfig-paths": "^3.11.0",
+    "typescript": "^4.4.3"
+  },
+  "private": true,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "OriSol",
+  "displayName": "OriSol",
+  "expo": {
+      "name": "OriSol",
+      "slug": "OriSol",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./src/assets/images/logo_size_invert.png",
+      "splash": {
+          "resize": "contain",
+          "backgroundColor": "#111936"
+      },
+      "assetBundlePatterns": [
+          "**/*"
+      ],
+      "android": {
+          "package": "com.orisistem.orisol"
+      },
+      "ios": {
+          "bundleIdentifier": "com.orisistem.orisol"
+      }
+  },
+  "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.orisistem.orisol"
+  },
+  "android": "com.orisistem.orisol"
+}
