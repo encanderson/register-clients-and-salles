@@ -10,7 +10,7 @@ interface AuthContextData {
   isLoggedIn: boolean;
   isInitialized: boolean;
   user: User | null;
-  login(data: { cpf: string; password: string }): Promise<void>;
+  login(data: { email: string; password: string }): Promise<void>;
   visible: boolean;
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }: ChilProps) => {
   const [initialState, setinitialState] = React.useState(state);
   const [visible, setVisible] = React.useState(false);
 
-  const login = async (data: { cpf: string; password: string }) => {
+  const login = async (data: { email: string; password: string }) => {
     console.log(data);
   };
 

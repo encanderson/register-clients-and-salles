@@ -8,14 +8,13 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import Container from "@components/Container";
 import InputIcon from "@components/InputIcon";
 import Button from "@components/Button";
-import InputMask from "@components/MaskInput";
+import InputText from "@components/InputText";
 import LoaderScreen from "@components/Loader";
 
 import { styles } from "@assets/styles/styles";
 import { Routes } from "../../types/ParamsList";
 
 import useAuth from "@hooks/useAuth";
-import { cpf } from "@utils/mask";
 
 type Props = NativeStackScreenProps<Routes>;
 
@@ -43,7 +42,7 @@ const LoginScreen = ({ navigation }: Props) => {
   }
 
   const [user, setUser] = React.useState({
-    cpf: "",
+    email: "",
     password: "",
   });
   const handleLogin = async () => {
@@ -51,29 +50,23 @@ const LoginScreen = ({ navigation }: Props) => {
   };
 
   const handleSignUp = () => {
-    setVisible(true);
-
-    setTimeout(() => navigation.navigate("SignUpScreen"), 300);
-
-    setTimeout(() => setVisible(false), 1000);
+    setTimeout(() => navigation.navigate("SignUpScreen"), 100);
   };
 
   return (
     <Container>
       <LoaderScreen visible={visible} />
       <View style={styles.containerAuth}>
-        <InputMask
-          label={"CPF"}
-          keyboardType="numeric"
+        <InputText
+          label={"Email"}
           onChangeText={(value) =>
             setUser({
               ...user,
-              cpf: value,
+              email: value,
             })
           }
           // @ts-ignore: Unreachable code error
-          value={user.cpf || ""}
-          mask={cpf}
+          value={user.email || ""}
         />
         <InputIcon
           label={"Senha"}

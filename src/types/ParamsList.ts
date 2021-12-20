@@ -13,4 +13,6 @@ export type Routes = {
   SignUpScreen: undefined;
   LoginScreen: undefined;
   ForgotPassword: undefined;
+  VerifyUserScreen: undefined;
+  ResetPasswordScreen: undefined;
 };
